@@ -1,4 +1,3 @@
-;; Lakota keyboard input, invoke with C-\
 (quail-define-package
 "white-hat" "Lakota" "Lak " t
 "Input method for the White Hat orthography."

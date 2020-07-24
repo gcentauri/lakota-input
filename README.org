@@ -33,19 +33,7 @@ and =(require 'lakota-input)=, or simply evaluate the quail package you
 wish to add. In Emacs, =C-\= will let you select an input mode, and toggle
 it once you have. If you wish to use a different one, use =C-u C-\=
 
-#+begin_src emacs-lisp :noweb yes :tangle lakota-input.el
-;; Lakota keyboard input, invoke with C-\
-<<white-hat>>
-
-<<suggested-lakota-orthography>>
-
-(provide 'lakota-input)
-#+end_src
-
-#+RESULTS:
-: lakota-input
-
-** White Hat Orthography
+*** White Hat Orthography
 
 This orthography was developed by Lakota people in 1982 and used in 
 Albert White Hat's book "Reading and Writing the Lakota Language".
@@ -56,7 +44,7 @@ above (t̄). To use them, type the letter followed by the combining diacritic
 you wish to use.
 
 #+name: white-hat
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle lakota-input.el
   (quail-define-package
   "white-hat" "Lakota" "Lak " t
   "Input method for the White Hat orthography."
@@ -69,13 +57,13 @@ you wish to use.
    )
 #+END_SRC
 
-** Suggested Lakota Orthography
+*** Suggested Lakota Orthography
 
 This orthography was developed by the Lakota Language Consortium, and
 is used in their teaching materials such as the New Lakota Dictionary.
 
 #+name: suggested-lakota-orthography
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle lakota-input.el
   (quail-define-package
    "lakota-slo" "Lakota" "Lak " t
    "Input method for the Suggested Lakota Orthography.
@@ -99,4 +87,6 @@ is used in their teaching materials such as the New Lakota Dictionary.
    ("r" ?š) ("R" ?Š)
    ;; velar nasal n
    ("f" ?ŋ))
+
+  (provide 'lakota-input)
 #+END_SRC
