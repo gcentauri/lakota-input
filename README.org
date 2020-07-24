@@ -1,0 +1,102 @@
+#+TITLE: Lakota Language Input Modes
+#+AUTHOR: Grant Shoshin Shangreaux
+#+EMAIL: shshoshin@protonmail.com
+
+Haú, mitákuyepi.
+Grant Shoshín Shangreaux emáčiyapi.
+
+Blóketu k'uŋ héhaŋ, Lakota Summer Institute ektá waí.
+Pispíza waŋ wayáwa iyáye. Wamákȟaškaŋ waŋzí waŋbláke.
+
+* Lakota Input Modes for Emacs
+
+Some keyboard inputs for the Lakota language are here created with Emacs'
+~quail~ package. This uses the Emacs input mode system documented here:
+[[info:emacs#Input Methods][info:emacs#Input Methods]]
+
+** Quail
+
+To make a custom input method with quail, there are two functions provided:
+=quail-define-package= and =quail-define-rules=.
+
+#+begin_quote
+(quail-define-package NAME LANGUAGE TITLE &optional ...)
+
+Define NAME as a new Quail package for input LANGUAGE.
+TITLE is a string to be displayed at mode-line to indicate this package.
+#+end_quote
+
+** lakota-input
+
+To use this input mode, put the =lakota-input.el= file in your load path
+and =(require 'lakota-input)=, or simply evaluate the quail package you
+wish to add. In Emacs, =C-\= will let you select an input mode, and toggle
+it once you have. If you wish to use a different one, use =C-u C-\=
+
+#+begin_src emacs-lisp :noweb yes :tangle lakota-input.el
+;; Lakota keyboard input, invoke with C-\
+<<white-hat>>
+
+<<suggested-lakota-orthography>>
+
+(provide 'lakota-input)
+#+end_src
+
+#+RESULTS:
+: lakota-input
+
+** White Hat Orthography
+
+This orthography was developed by Lakota people in 1982 and used in 
+Albert White Hat's book "Reading and Writing the Lakota Language".
+
+Currently, this just maps the "f" key to the nasal ŋ and the "r" and
+"v" keys are mapped to combining dot above (ċ), and combining macron (line)
+above (t̄). To use them, type the letter followed by the combining diacritic
+you wish to use.
+
+#+name: white-hat
+#+BEGIN_SRC emacs-lisp
+  (quail-define-package
+  "white-hat" "Lakota" "Lak " t
+  "Input method for the White Hat orthography."
+  nil t nil nil nil nil nil nil nil nil t)
+
+  (quail-define-rules
+   ("f" ?ŋ)
+   ("r" #x307)                            ; COMBINING DOT ABOVE
+   ("v" #x304)                            ; COMBINING MACRON
+   )
+#+END_SRC
+
+** Suggested Lakota Orthography
+
+This orthography was developed by the Lakota Language Consortium, and
+is used in their teaching materials such as the New Lakota Dictionary.
+
+#+name: suggested-lakota-orthography
+#+BEGIN_SRC emacs-lisp
+  (quail-define-package
+   "lakota-slo" "Lakota" "Lak " t
+   "Input method for the Suggested Lakota Orthography.
+  Uses a postfix modifier key for adding accent diacritics. To add stress
+  to a vowel, simply type the single quote ' after the vowel. All other characters
+  are bound to a single key. Mitákuyepi philámayaye ló. "
+  nil t nil nil nil nil nil nil nil nil t)
+
+  (quail-define-rules
+   ;; accented vowels
+   ("a'" ?á) ("A'" ?Á)
+   ("e'" ?é) ("E'" ?É)
+   ("i'" ?í) ("I'" ?Í)
+   ("o'" ?ó) ("O'" ?Ó)
+   ("u'" ?ú) ("U'" ?Ú)
+   ;; consonants with hacek (wedges)
+   ("c" ?č) ("C" ?Č)
+   ("j" ?ȟ) ("J" ?Ȟ)
+   ("q" ?ǧ) ("Q" ?Ǧ)
+   ("x" ?ž) ("X" ?Ž)
+   ("r" ?š) ("R" ?Š)
+   ;; velar nasal n
+   ("f" ?ŋ))
+#+END_SRC
