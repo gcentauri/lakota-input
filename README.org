@@ -74,3 +74,43 @@ is used in their teaching materials such as the New Lakota Dictionary.
 
   (provide 'lakota-input)
 #+END_SRC
+
+* Lakota X11 Keyboard Layouts
+
+The layout definitions are in the [[lakota]] file in this repo. They are
+essentially the same as the Emacs layouts above, except that the 
+combining accent is a prefix. Type ' followed by the vowel.
+
+To "install" the layouts, I put the =lakota= file at =/usr/share/X11/xkb/symbols=
+and then added this XML section to =/usr/share/X11/xkb/rules/evdev.xml= in the
+appropriate section:
+
+#+BEGIN_SRC xml
+    <layout>
+      <configItem>
+        <name>lakota</name>
+        <description>Lakota</description>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>whitehat</name>
+            <shortDescription>lwh</shortDescription>
+            <description>Lakota White Hat</description>
+          </configItem>
+        </variant>
+      </variantList>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>slo</name>
+            <shortDescription>slo</shortDescription>
+            <description>Suggested Lakota Orthography</description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+#+END_SRC
+
+Once that is done and you restart X, you should see the Lakota keyboard layout
+available in your keyboard settings.

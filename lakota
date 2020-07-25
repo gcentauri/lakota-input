@@ -1,0 +1,24 @@
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "slo" {
+
+    include "us(basic)"
+    name[Group1]= "Lakota (SLO)";
+
+    key <AD01> {	[	  U01E7,	U01E6 		]	};
+    key <AD04> {	[	  U0161,	U0160		]	};
+    key <AC04> {	[	  U014B,	U014A		]	};
+    key <AC07> {	[	  U021F,	U021E		]	};
+    key <AB02> {	[	  U017E,	U017D		]	};
+    key <AB03> {	[	  U010D,	U010C		]	};
+    key <AC11> {	[         dead_acute, quotedbl          ]	};
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "whitehat" {
+
+    include "us(basic)"
+    name[Group1]= "Lakota White Hat";
+
+    key <AD04> {   [	0x1000307,	0x1000307		]	};      // combining dot above
+    key <AB04> {   [	0x1000304,	0x1000304		]	};      // combining macron above
+};
