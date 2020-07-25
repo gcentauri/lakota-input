@@ -1,4 +1,4 @@
-#+TITLE: Lakota Language Input Modes
+#+TITLE: Lakota Language Keyboard Layouts
 #+AUTHOR: Grant Shoshin Shangreaux
 #+EMAIL: shshoshin@protonmail.com
 
@@ -11,29 +11,14 @@ Pispíza waŋ wayáwa iyáye. Wamákȟaškaŋ waŋzí waŋbláke.
 * Lakota Input Modes for Emacs
 
 Some keyboard inputs for the Lakota language are here created with Emacs'
-~quail~ package. This uses the Emacs input mode system documented here:
-[[info:emacs#Input Methods][info:emacs#Input Methods]]
+~quail~ package. 
 
-** Quail
-
-To make a custom input method with quail, there are two functions provided:
-=quail-define-package= and =quail-define-rules=.
-
-#+begin_quote
-(quail-define-package NAME LANGUAGE TITLE &optional ...)
-
-Define NAME as a new Quail package for input LANGUAGE.
-TITLE is a string to be displayed at mode-line to indicate this package.
-#+end_quote
-
-** lakota-input
-
-To use this input mode, put the =lakota-input.el= file in your load path
+To use these input modes, put the =lakota-input.el= file in your load path
 and =(require 'lakota-input)=, or simply evaluate the quail package you
 wish to add. In Emacs, =C-\= will let you select an input mode, and toggle
 it once you have. If you wish to use a different one, use =C-u C-\=
 
-*** White Hat Orthography
+** White Hat Orthography
 
 This orthography was developed by Lakota people in 1982 and used in 
 Albert White Hat's book "Reading and Writing the Lakota Language".
@@ -57,7 +42,7 @@ you wish to use.
    )
 #+END_SRC
 
-*** Suggested Lakota Orthography
+** Suggested Lakota Orthography
 
 This orthography was developed by the Lakota Language Consortium, and
 is used in their teaching materials such as the New Lakota Dictionary.
