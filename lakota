@@ -19,6 +19,7 @@ xkb_symbols "whitehat" {
     include "us(basic)"
     name[Group1]= "Lakota White Hat";
 
-    key <AD04> {   [	0x1000307,	0x1000307		]	};      // combining dot above
-    key <AB04> {   [	0x1000304,	0x1000304		]	};      // combining macron above
+    key <AC04> {	[	  U014B,	U014A		]	};      // "f" - nasal n
+    key <AD04> {   [	0x1000307,	0x1000307		]	};      // "r" - combining dot above
+    key <AB04> {   [	0x1000304,	0x1000304		]	};      // "v" - combining macron above
 };
