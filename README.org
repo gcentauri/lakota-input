@@ -10,8 +10,7 @@ Pispíza waŋ wayáwa iyáye. Wamákȟaškaŋ waŋzí waŋbláke.
 
 * Lakota Input Modes for Emacs
 
-Some keyboard inputs for the Lakota language are here created with Emacs'
-~quail~ package. 
+Keyboard inputs for the Lakota language created with Emacs' ~quail~ package.
 
 To use these input modes, put the =lakota-input.el= file in your load path
 and =(require 'lakota-input)=, or simply evaluate the quail package you
@@ -20,7 +19,7 @@ it once you have. If you wish to use a different one, use =C-u C-\=
 
 ** White Hat Orthography
 
-This orthography was developed by Lakota people in 1982 and used in 
+This orthography was developed by Lakota people in 1982 and used in
 Albert White Hat's book "Reading and Writing the Lakota Language".
 
 Currently, this just maps the "f" key to the nasal ŋ and the "r" and
@@ -53,8 +52,8 @@ is used in their teaching materials such as the New Lakota Dictionary.
    "lakota-slo" "Lakota" "Lak " t
    "Input method for the Suggested Lakota Orthography.
   Uses a postfix modifier key for adding accent diacritics. To add stress
-  to a vowel, simply type the single quote ' after the vowel. All other characters
-  are bound to a single key. Mitákuyepi philámayaye ló. "
+  to a vowel, simply type the single quote ' after the vowel. All other
+  characters are bound to a single key. Mitákuyepi philámayaye ló."
   nil t nil nil nil nil nil nil nil nil t)
 
   (quail-define-rules
