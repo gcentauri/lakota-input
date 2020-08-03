@@ -31,6 +31,8 @@ nil t nil nil nil nil nil nil nil nil t)
  ("x" ?ž) ("X" ?Ž)
  ("r" ?š) ("R" ?Š)
  ;; velar nasal n
- ("f" ?ŋ))
+ ("f" ?ŋ)
+;; glottal stop
+ ("''" ?’))
 
 (provide 'lakota-input)
