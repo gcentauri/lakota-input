@@ -79,7 +79,7 @@ is used in their teaching materials such as the New Lakota Dictionary.
 
 * Lakota X11 Keyboard Layouts
 
-The layout definitions are in the [[lakota]] file in this repo. They are
+The layout definitions are in the [[./lakota]] file in this repo. They are
 essentially the same as the Emacs layouts above, except that the 
 combining accent is a prefix. Type ' followed by the vowel.
 
