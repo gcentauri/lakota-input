@@ -71,6 +71,8 @@ is used in their teaching materials such as the New Lakota Dictionary.
    ("r" ?š) ("R" ?Š)
    ;; velar nasal n
    ("f" ?ŋ))
+   ;; glottal stop
+   ("''" ?’)
 
   (provide 'lakota-input)
 #+END_SRC
