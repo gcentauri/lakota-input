@@ -1,4 +1,4 @@
-;;; lakota-input.el --- Input modes for Lakota language orthographies
+;;; lakota-input.el --- Input modes for Lakota language orthographies -*- lexical-binding: t; -*-
 
 ;; Author: Grant Shangreaux (shshoshin@protonmail.com)
 ;; URL: https://git.sr.ht/~shoshin/lakota-input
