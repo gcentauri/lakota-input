@@ -1,10 +1,10 @@
 
 # Table of Contents
 
-1.  [Lakota Input Modes for Emacs](#org14c322a)
-    1.  [White Hat Orthography](#org5ddc55c)
-    2.  [Suggested Lakota Orthography](#org86c60e3)
-2.  [Lakota X11 Keyboard Layouts](#orge7321e4)
+1.  [Lakota Input Modes for Emacs](#orged787e4)
+    1.  [White Hat Orthography](#org8b942ee)
+    2.  [Suggested Lakota Orthography](#orgd472618)
+2.  [Lakota X11 Keyboard Layouts](#org87b82b9)
 
 Haú, mitákuyepi.
 Grant Shoshín Shangreaux emáčiyapi.
@@ -13,7 +13,7 @@ Blóketu k'uŋ héhaŋ, Lakota Summer Institute ektá waí.
 Pispíza waŋ wayáwa iyáye. Wamákȟaškaŋ waŋzí waŋbláke.
 
 
-<a id="org14c322a"></a>
+<a id="orged787e4"></a>
 
 # Lakota Input Modes for Emacs
 
@@ -25,7 +25,7 @@ wish to add. In Emacs, `C-\` will let you select an input mode, and toggle
 it once you have. If you wish to use a different one, use `C-u C-\`
 
 
-<a id="org5ddc55c"></a>
+<a id="org8b942ee"></a>
 
 ## White Hat Orthography
 
@@ -49,7 +49,7 @@ you wish to use.
      )
 
 
-<a id="org86c60e3"></a>
+<a id="orgd472618"></a>
 
 ## Suggested Lakota Orthography
 
@@ -85,11 +85,11 @@ is used in their teaching materials such as the New Lakota Dictionary.
     (provide 'lakota-input)
 
 
-<a id="orge7321e4"></a>
+<a id="org87b82b9"></a>
 
 # Lakota X11 Keyboard Layouts
 
-The layout definitions are in the <./lakota> file in this repo. They are
+The layout definitions are in the `lakota` file in this repo. They are
 essentially the same as the Emacs layouts above, except that the 
 combining accent is a prefix. Type ' followed by the vowel.
 
