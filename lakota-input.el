@@ -1,4 +1,4 @@
-;;; lakota-input.el --- input modes for Lakota language orthographies
+;;; lakota-input.el --- Input modes for Lakota language orthographies
 
 ;; Author: Grant Shangreaux (shshoshin@protonmail.com)
 ;; URL: https://git.sr.ht/~shoshin/lakota-input
@@ -20,7 +20,7 @@
 ;;; Commentary:
 
 ;; A set of quail packages defining input modes of various orthographies
-;; for the Lakota language. I'd like to acknowledge the elders and
+;; for the Lakota language.  I'd like to acknowledge the elders and
 ;; ancestors who fought to keep the language and culture alive.
 
 ;;; Code:
